@@ -1,0 +1,146 @@
+<!-- Tệp chứa tất cả các mẫu HTML cho ứng dụng Potato Leaf Disease Classifier -->
+
+<!-- Header & Title -->
+<div id="header-container" class="header-container">
+    <h1>Potato Leaf Disease Classifier</h1>
+</div>
+
+<div id="subtitle" class="subtitle">AI-powered diagnosis for potato plant health</div>
+
+<!-- Welcome Box -->
+<div id="welcome-box" class="welcome-box">
+    <h3>Welcome to our Leaf Analysis Tool! <span style="font-size: 28px;">🌱</span></h3>
+    <p>Upload a clear photo of a potato plant leaf, and our AI model will detect potential diseases, including bacterial, fungal, viral infections, and pest damage. Get quick, accurate results to help you protect your plants and ensure healthy growth.</p>
+</div>
+
+<!-- Upload Instructions -->
+<div id="upload-instructions" style="background: linear-gradient(90deg, rgba(76, 175, 80, 0.1) 0%, rgba(255, 255, 255, 0) 100%); 
+            padding: 15px; border-radius: 10px; margin-bottom: 20px;">
+    <h3 style="margin-top: 0;">📸 Upload a leaf image</h3>
+    <p style="margin-bottom: 5px;">For best results, use a well-lit, clear image of a single potato leaf.</p>
+</div>
+
+<!-- Image Display Header -->
+<h3 id="image-header" style="display: flex; align-items: center; gap: 10px;">
+    <span>🖼️</span> Uploaded Image
+</h3>
+
+<!-- Analysis Results Header -->
+<h3 id="analysis-header" style="display: flex; align-items: center; gap: 10px;">
+    <span>🔬</span> Analysis Results
+</h3>
+
+<!-- Results Card Template -->
+<div id="result-card-template" class="result-card">
+    <div class="diagnosis">Diagnosis: <span class="highlight">{predicted_label}</span></div>
+</div>
+
+<!-- Top 3 Predictions Header -->
+<h4 id="top3-header" style="display: flex; align-items: center; gap: 8px; margin-top: 20px;">
+    <span>📊</span> Top 3 Possibilities:
+</h4>
+
+<!-- Prediction Bar Template - Fixed CSS issues -->
+<div id="prediction-bar-template" class="prediction-bar">
+    <div class="prediction-label">{disease}</div>
+    <div class="prediction-bar-container">
+        <div class="prediction-bar-fill" style="width: {width}%"></div>
+    </div>
+    <div class="prediction-value">{value}%</div>
+</div>
+
+<!-- Disease Info Template -->
+<div id="disease-info-template">
+    <div style="background-color: rgba(76, 175, 80, 0.05); padding: 15px; border-radius: 8px; margin-bottom: 15px;">
+        <h4 style="margin-top: 0; color: #388E3C;">🎯About {disease}:</h4>
+        <p>{description}</p>
+    </div>
+    <!-- <div style="background-color: rgba(139, 195, 74, 0.1); padding: 20px; border-radius: 8px; border-left: 4px solid #689F38; box-shadow: 0 2px 5px rgba(0,0,0,0.05); margin-top: 15px; margin-bottom: 10px;">
+        <h4 style="margin-top: 0; color: #689F38; font-size: 1.2rem; display: flex; align-items: center; gap: 8px;">
+            <span>💊</span> Recommended Treatment:
+        </h4>
+        <p style="font-size: 1.05rem; line-height: 1.5;">{treatment}</p>
+    </div> -->
+</div>
+
+<!-- Sample Images Section -->
+<div id="sample-images-header" class="section-header">
+    <span>🌿</span>
+    <h3>Sample Images</h3>
+</div>
+<p id="sample-images-desc">Don't have an image? Here are some examples of different leaf conditions:</p>
+
+<!-- Sample Image Placeholder -->
+<div id="sample-image-placeholder" class="sample-image-placeholder">
+    <p>Sample image not available</p>
+</div>
+
+<!-- How Model Works Header -->
+<h3 id="how-model-works" style="display: flex; align-items: center; gap: 10px; margin-top: 10px;">
+    <span>🔍</span> How Our Model Works
+</h3>
+
+<!-- Model Explanation -->
+<div id="model-explanation" style="background: linear-gradient(135deg, rgba(76, 175, 80, 0.05) 0%, rgba(139, 195, 74, 0.1) 100%);
+           padding: 20px; border-radius: 10px; margin-bottom: 25px;">
+    <p style="margin-top: 0;">
+        Our potato leaf disease classifier uses a deep learning model (EfficientNet B0) trained on 
+        thousands of images of potato plant leaves. The model analyzes patterns, colors, and textures 
+        in the leaf images to identify signs of various diseases.
+    </p>
+</div>
+
+<!-- Process Explanation -->
+<div id="process-explanation" style="background-color: white; padding: 20px; border-radius: 10px; 
+            box-shadow: 0 2px 6px rgba(0,0,0,0.05); margin-bottom: 30px;">
+    <h4 style="color: #4CAF50; margin-top: 0;">The process works as follows:</h4>
+    <ol style="margin-bottom: 0;">
+        <li><strong>Image Upload:</strong> You upload an image of a potato leaf</li>
+        <li><strong>Preprocessing:</strong> Our system preprocesses the image (resizing, normalization)</li>
+        <li><strong>Analysis:</strong> The AI model analyzes the image features</li>
+        <li><strong>Diagnosis:</strong> The system provides a diagnosis with confidence levels</li>
+    </ol>
+</div>
+
+<!-- Model Performance Header -->
+<h3 id="model-performance" style="display: flex; align-items: center; gap: 10px; margin-top: 30px; margin-bottom: 20px;">
+    <span>📈</span> Model Performance
+</h3>
+
+<!-- Footer -->
+<div id="footer-text" class="footer-text">
+    <p>For Best Results</p>
+    <ul>
+        <li>📸 Use well-lit, clear images</li>
+        <li>🔍 Focus on individual leaves</li>
+        <li>🖼️ Center the leaf in frame</li>
+        <li>🌿 Include both sides of leaf when possible</li>
+    </ul>
+</div>
+
+<!-- Tab Styling -->
+<style id="tab-styling">
+.stTabs [data-baseweb="tab-list"] {
+    gap: 2px;
+    margin-bottom: 15px;
+}
+.stTabs [data-baseweb="tab"] {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 16px;
+    border-radius: 8px 8px 0 0;
+}
+</style>
+
+<!-- Metrics Styling -->
+<style id="metrics-styling">
+[data-testid="stMetric"] {
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.05) 0%, rgba(255, 255, 255, 0) 100%);
+    border-radius: 10px;
+    padding: 15px 10px;
+    border-left: 3px solid var(--primary-color);
+}
+</style> 
