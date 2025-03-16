@@ -202,32 +202,32 @@ def show_frontend():
                             with st.expander("📋 Disease Information & Treatment"):
                                 disease_info = {
                                     "Bacteria": {
-                                        "desc": "Bacterial diseases in potato plants often cause wilting, rotting, and discoloration. They can spread quickly in warm, humid conditions.",
-                                        "treatment": "Apply copper-based bactericides and ensure good air circulation between plants. Remove and destroy infected plants to prevent spread. Practice crop rotation to reduce soil-borne bacteria."
+                                        "desc": "Bacterial diseases in potato plants cause wilting, rotting, and discoloration, spreading rapidly in warm, humid conditions. They can be transmitted through contaminated water, soil, or tools. Farmers should practice sanitation, crop rotation, and use resistant varieties to manage these infections and prevent crop losses.",
+                                        "treatment": "Apply copper-based bactericides and ensure good air circulation between plants. Remove infected plants to prevent spread and practice crop rotation to reduce soil-borne bacteria, helping to control bacterial diseases and maintain healthy potato crops."
                                     },
                                     "Fungi": {
-                                        "desc": "Fungal infections can cause spots, lesions, and tissue death.",
-                                        "treatment": "Regular fungicide application and avoiding overhead watering."
+                                        "desc": "Fungal infections in plants can lead to symptoms like spots, lesions, and tissue death. These infections spread through spores, often thriving in damp, humid conditions. Prompt treatment with fungicides and proper plant care are essential to prevent further damage and protect crop health.",
+                                        "treatment": "Regular fungicide application and avoiding overhead watering are key strategies to prevent fungal infections. These practices help reduce moisture on plant surfaces, limiting the conditions that fungi need to grow, thus protecting plants from damage and promoting healthier crops."
                                     },
                                     "Healthy": {
-                                        "desc": "The leaf appears healthy with no visible signs of disease.",
-                                        "treatment": "Continue with regular care and monitoring."
+                                        "desc": "The leaf appears healthy, showing no visible signs of disease such as spots, discoloration, or wilting. It has a vibrant green color, indicating good plant health and proper care, with no indication of pests or infections affecting its condition.",
+                                        "treatment": "Continue with regular care and monitoring to ensure the plant remains healthy. Keep an eye out for any early signs of disease or stress, and maintain proper watering, fertilization, and pest control practices to support ongoing plant vitality and growth."
                                     },
                                     "Nematode": {
-                                        "desc": "Nematode infections affect the roots and can cause stunted growth and yellowing of leaves.",
-                                        "treatment": "Crop rotation and nematicide application when necessary."
+                                        "desc": "Nematode infections damage the roots, leading to stunted growth and yellowing of leaves. These microscopic pests disrupt nutrient and water absorption, weakening the plant. Early detection and proper soil management are essential to control nematode damage and ensure healthy plant development.",
+                                        "treatment": "Crop rotation and the application of nematicides when necessary help manage nematode infestations. Rotating crops reduces soil-borne nematode populations, while nematicides can target and control these pests, ensuring healthier soil and promoting the growth of future crops."
                                     },
                                     "Pest": {
-                                        "desc": "Pest damage is characterized by chewing marks, holes, and irregular patterns on leaves.",
-                                        "treatment": "Apply appropriate insecticides or introduce beneficial insects."
+                                        "desc": "Pest damage is often identified by chewing marks, holes, and irregular patterns on leaves. These signs indicate the presence of insects or other pests feeding on the plant. Prompt pest control measures, such as insecticides or natural predators, are necessary to protect plant health.",
+                                        "treatment": "Apply appropriate insecticides or introduce beneficial insects, such as ladybugs or predatory beetles, to control pests. These methods help reduce pest populations and minimize damage to plants, promoting healthier crops while minimizing the impact on the environment."
                                     },
                                     "Phytopthora": {
-                                        "desc": "A serious water mold infection that can cause late blight, leading to rapid plant death if untreated.",
-                                        "treatment": "Fungicides containing metalaxyl or chlorothalonil, and ensuring proper drainage."
+                                        "desc": "A serious water mold infection can cause late blight, which leads to rapid plant death if left untreated. Symptoms include dark lesions on leaves, stems, and fruits. Timely treatment with fungicides and proper plant management are crucial to prevent the spread and protect the crop.",
+                                        "treatment": "Fungicides containing metalaxyl or chlorothalonil effectively control water mold infections like late blight. Ensuring proper drainage also helps prevent excess moisture, creating unfavorable conditions for the mold. Combined, these measures reduce infection risks and protect plant health."
                                     },
                                     "Virus": {
-                                        "desc": "Viral infections often cause mottling, stunting, and leaf deformation.",
-                                        "treatment": "No cure available. Remove and destroy infected plants to prevent spread."
+                                        "desc": "Viral infections in plants often lead to symptoms such as mottling, stunting, and leaf deformation. These viruses can spread through insects, contaminated tools, or infected seeds, and while there is no cure, controlling vectors and removing infected plants can help limit their spread.",
+                                        "treatment": "There is no cure for viral infections in plants. To prevent further spread, it's essential to remove and destroy infected plants promptly. Additionally, controlling insect vectors and practicing good sanitation can help reduce the risk of future infections."
                                     }
                                 }
                                 
@@ -258,13 +258,13 @@ def show_frontend():
             
             metric1, metric2, metric3, metric4 = st.columns(4)
             with metric1:
-                st.metric(label="Accuracy", value="94.5%")
+                st.metric(label="Accuracy", value="96.01%")
             with metric2:
-                st.metric(label="Precision", value="93.2%")
+                st.metric(label="Precision", value="96.03%")
             with metric3:
-                st.metric(label="Recall", value="91.8%")
+                st.metric(label="Recall", value="96.01%")
             with metric4:
-                st.metric(label="F1", value="90%")
+                st.metric(label="F1-Score", value="95.99%")
 
     # Footer with template
     st.markdown(get_html_section(html_template, "footer-text"), unsafe_allow_html=True)
